@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Brainstem</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js",
+          "three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app" class="page page--viewer">
+      <header class="viewer-bar">
+        <h1 class="viewer-bar__title">Interactive Brainstem</h1>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          role="switch"
+          aria-label="Toggle day/night mode"
+          aria-checked="false"
+        >
+          <span class="theme-toggle__track">
+            <span class="theme-toggle__thumb" aria-hidden="true"></span>
+            <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+            <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+          </span>
+        </button>
+      </header>
+
+      <canvas id="scene"></canvas>
+
+      <p class="loading-banner" id="loading-banner">Loading anatomical models…</p>
+
+      <div class="structure-popup" id="structure-popup" hidden>
+        <button class="structure-popup__close" id="popup-close" type="button" aria-label="Close">×</button>
+        <h2 class="structure-popup__title" id="popup-title"></h2>
+        <p class="structure-popup__body" id="popup-body"></p>
+      </div>
+
+      <footer class="copyright">© Omar Garagozov 2026</footer>
+    </div>
+    <script type="module" src="src/brainstem.js"></script>
+  </body>
+</html>
