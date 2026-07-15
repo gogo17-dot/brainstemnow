@@ -2,8 +2,8 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { BRAINSTEM_GLB_FILES } from './brainstemManifest.js';
 import brainstemStructures from './brainstemStructures.js';
-import { createViewer, frameObject, disposeScene } from './shared/viewer.js';
-import { THEME_COLORS } from './shared/theme.js';
+import { createViewer, frameObject, disposeScene } from './viewer.js';
+import { THEME_COLORS } from './theme.js';
 import { modelUrl } from './paths.js';
 
 const FADED_OPACITY = 0.14;

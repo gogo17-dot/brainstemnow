@@ -1,7 +1,7 @@
-import { initTheme } from './shared/theme.js';
-import { initPopup, showPopup, hidePopup } from './shared/popup.js';
+import { initTheme } from './theme.js';
+import { initPopup, showPopup, hidePopup } from './popup.js';
 import { BrainstemScene } from './BrainstemScene.js';
-import { getTheme } from './shared/theme.js';
+import { getTheme } from './theme.js';
 
 const loadingEl = document.getElementById('loading-banner');
 
@@ -14,7 +14,7 @@ function updateLoading(loaded, total, done = false, failed = 0) {
     if (failed >= total || loaded === 0) {
       loadingEl.hidden = false;
       loadingEl.textContent =
-        'Could not load 3D models. Ensure public/brainstem_glb/ is committed and pushed to GitHub.';
+        'Could not load 3D models. Ensure all .glb files are uploaded to the repo root and pushed to GitHub.';
       return;
     }
     loadingEl.hidden = true;
